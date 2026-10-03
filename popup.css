@@ -1,0 +1,58 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  width: 300px;
+  font-family: -apple-system, "PingFang SC", "Segoe UI", sans-serif;
+  background: #1e1e24;
+  color: #f5f5f7;
+}
+
+.app { padding: 18px 18px 14px; text-align: center; }
+
+.tabs { display: flex; gap: 6px; justify-content: center; margin-bottom: 14px; }
+
+.tab {
+  border: none; border-radius: 14px; padding: 5px 12px;
+  background: #2c2c34; color: #aaa; font-size: 12px; cursor: pointer;
+}
+.tab.active { background: #e74c3c; color: #fff; font-weight: 600; }
+.app[data-phase="short"] .tab.active { background: #27ae60; }
+.app[data-phase="long"]  .tab.active { background: #2980b9; }
+
+.time {
+  font-size: 64px; font-weight: 700; font-variant-numeric: tabular-nums;
+  letter-spacing: 2px; margin-bottom: 8px;
+}
+
+.dots { display: flex; gap: 6px; justify-content: center; min-height: 10px; margin-bottom: 14px; }
+.dot { width: 9px; height: 9px; border-radius: 50%; background: #3a3a44; }
+.dot.filled { background: #e74c3c; }
+
+.controls { display: flex; gap: 8px; justify-content: center; margin-bottom: 10px; }
+
+button { font-family: inherit; }
+.primary {
+  border: none; border-radius: 8px; padding: 9px 26px;
+  background: #e74c3c; color: #fff; font-size: 15px; font-weight: 600; cursor: pointer;
+}
+.app[data-phase="short"] .primary { background: #27ae60; }
+.app[data-phase="long"]  .primary { background: #2980b9; }
+.primary:hover { filter: brightness(1.1); }
+.primary.small { padding: 6px 16px; font-size: 13px; width: 100%; margin-top: 8px; }
+
+.ghost {
+  border: 1px solid #3a3a44; border-radius: 8px; padding: 9px 14px;
+  background: transparent; color: #999; font-size: 13px; cursor: pointer;
+}
+.ghost:hover { color: #fff; border-color: #666; }
+
+.settings { text-align: left; border-top: 1px solid #2c2c34; padding-top: 10px; }
+.settings summary { cursor: pointer; color: #888; font-size: 12px; margin-bottom: 6px; }
+.settings label { display: block; font-size: 12px; color: #bbb; margin: 6px 0; }
+.settings label.row { display: flex; align-items: center; gap: 6px; }
+.settings input[type="number"] {
+  width: 52px; margin-left: 6px; padding: 3px 6px;
+  background: #2c2c34; border: 1px solid #3a3a44; border-radius: 6px;
+  color: #fff; font-size: 12px;
+}
+.settings input[type="checkbox"] { accent-color: #e74c3c; }

@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "番茄时钟 Pomodoro",
+  "version": "1.0.0",
+  "description": "简洁的番茄工作法计时器：专注 25 分钟，短休 5 分钟，每 4 轮一次长休。",
+  "permissions": ["alarms", "notifications", "storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "番茄时钟"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="app" id="app">
+    <div class="tabs">
+      <button class="tab" data-phase="work">专注</button>
+      <button class="tab" data-phase="short">短休息</button>
+      <button class="tab" data-phase="long">长休息</button>
+    </div>
+
+    <div class="time" id="time">25:00</div>
+
+    <div class="dots" id="dots" title="已完成的番茄钟"></div>
+
+    <div class="controls">
+      <button id="startPause" class="primary">开始</button>
+      <button id="reset" class="ghost">重置</button>
+      <button id="skip" class="ghost">跳过</button>
+    </div>
+
+    <details class="settings">
+      <summary>设置</summary>
+      <label>专注时长（分钟）<input type="number" id="setWork" min="1" max="120"></label>
+      <label>短休息（分钟）<input type="number" id="setShort" min="1" max="60"></label>
+      <label>长休息（分钟）<input type="number" id="setLong" min="1" max="120"></label>
+      <label>每 <input type="number" id="setEvery" min="2" max="12"> 个番茄钟后长休</label>
+      <label class="row"><input type="checkbox" id="setAuto"> 自动开始下一阶段</label>
+      <button id="saveSettings" class="primary small">保存设置</button>
+    </details>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
